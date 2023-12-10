@@ -1,0 +1,64 @@
+/* movimento.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Styles for the transaction div */
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid #ddd; /* Border for each transaction */
+}
+
+
+
+/* Styles for the transaction icon */
+.transaction-icon {
+    margin-right: 10px;
+}
+
+/* Styles for the transaction bar */
+.transaction-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 5px;
+}
+
+/* Styles for incoming transaction bar */
+.transaction.incoming .transaction-bar {
+    background-color: #e74c3c; /* Red bar for incoming transactions */
+}
+
+/* Styles for outgoing transaction bar */
+.transaction.outgoing .transaction-bar {
+    background-color: #2ecc71; /* Green bar for outgoing transactions */
+}
+
+/* Styles for the transaction info */
+.transaction-info {
+    flex-grow: 1;
+}
+
+/* Styles for transaction labels, description, quantity, and value */
+.transaction-label,
+.transaction-description,
+.transaction-quantity,
+.transaction-value {
+    margin-bottom: 5px;
+}
+
+/* Styles for the transaction date */
+.transaction-date {
+    margin-left: 10px;
+}

@@ -1,0 +1,51 @@
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 10px;
+    text-align: center;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em
+}
+
+.box {
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Style for the button */
+a.box {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #ecf0f1;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect */
+a.box:hover {
+    background-color: #2c3e50;
+}
