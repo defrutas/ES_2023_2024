@@ -1,3 +1,5 @@
+
+
 header {
     background: linear-gradient(to right, #141e30, #243b55);
     color: #ecf0f1;
@@ -18,11 +20,9 @@ nav {
 
 .box-container {
     display: flex;
-    justify-content: space-around;
+    border-spacing: 100px;
+    justify-content: center;
     padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50em;
 }
 
 .box {
@@ -32,7 +32,9 @@ nav {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 0 10px; /* Add margin for spacing */
 }
+
 
 /* Style for the button */
 a.box {
