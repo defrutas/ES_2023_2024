@@ -24,3 +24,54 @@ function requestMore(id) {
     // For now, let's just show a notification
     alert('Request sent!');
 }
+
+// Function to add a new row to the table
+function addNewRow() {
+    // Retrieve existing data from local storage
+    var existingData = JSON.parse(localStorage.getItem('inventoryData')) || [];
+
+    // Define the new row data
+    var newRowData = {
+        material: 'New Material',
+        quantity: 0,
+        price: '0.00 €/kg'
+    };
+
+    // Add the new row data to the existing data
+    existingData.push(newRowData);
+
+    // Save the updated data to local storage
+    localStorage.setItem('inventoryData', JSON.stringify(existingData));
+
+    // Render the table with updated data
+    renderTable();
+}
+
+// Function to render the table with data from local storage
+function renderTable() {
+    var tableBody = document.getElementById('inventoryBody');
+    
+    // Retrieve data from local storage
+    var rowData = JSON.parse(localStorage.getItem('inventoryData')) || [];
+
+    // Clear existing rows
+    tableBody.innerHTML = '';
+
+    // Add rows based on the retrieved data
+    rowData.forEach(function(data) {
+        var newRowHtml = `
+            <tr>
+                <td>${data.material}</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                        <div class="progress-text">${data.quantity}</div>
+                    </div>
+                </td>
+                <td>${data.price}</td>
+                <td><button class="request-button" onclick="requestMore('${data.material}')">Fazer Pedido</button></td>
+            </tr>
+        `;
+        tableBody.innerHTML += newRowHtml;
+    });
+}
