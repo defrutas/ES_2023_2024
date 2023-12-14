@@ -1,5 +1,5 @@
- // List of predefined users
- var users = [
+// List of predefined users
+var users = [
     { username: 'flavio', password: '1234' },
     { username: 'adneiza', password: '1234' },
     { username: 'ezequiel', password: '1234' },
@@ -20,10 +20,11 @@ function attemptLogin() {
     var matchingUser = users.find(user => user.username === username && user.password === password);
 
     if (matchingUser) {
-        alert('Login successful!');
+        console.log('Login successful!'); // Add a console log for debugging
         // Redirect to index.html
         window.location.href = 'index.html';
     } else {
+        console.log('Invalid username or password. Please try again.'); // Add a console log for debugging
         alert('Invalid username or password. Please try again.');
     }
 }
