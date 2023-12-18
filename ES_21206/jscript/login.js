@@ -12,7 +12,7 @@ function attemptLogin() {
 
     // Simple validation
     if (username === '' || password === '') {
-        alert('Please enter both username and password.');
+        alert('Por favor introduza o nome de utilizador e a password');
         return;
     }
 
@@ -20,11 +20,11 @@ function attemptLogin() {
     var matchingUser = users.find(user => user.username === username && user.password === password);
 
     if (matchingUser) {
-        console.log('Login successful!'); // Add a console log for debugging
+        console.log('Login com sucesso'); // Add a console log for debugging
         // Redirect to index.html
         window.location.href = 'index.html';
     } else {
-        console.log('Invalid username or password. Please try again.'); // Add a console log for debugging
-        alert('Invalid username or password. Please try again.');
+        console.log('Nome de utilizador ou password invalido.'); // Add a console log for debugging
+        alert('Nome de utilizador ou password invalido.');
     }
 }
