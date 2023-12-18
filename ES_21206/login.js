@@ -6,25 +6,21 @@ var users = [
 ];
 
 function attemptLogin() {
-    // Get input values
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
 
-    // Simple validation
     if (username === '' || password === '') {
-        alert('Please enter both username and password.');
+        alert('Introduzir utilizador e palavra-passe!');
         return;
     }
 
-    // Check if the entered credentials match any user
     var matchingUser = users.find(user => user.username === username && user.password === password);
 
     if (matchingUser) {
-        console.log('Login successful!'); // Add a console log for debugging
-        // Redirect to index.html
+        console.log('Login successful!'); 
         window.location.href = 'index.html';
     } else {
-        console.log('Invalid username or password. Please try again.'); // Add a console log for debugging
-        alert('Invalid username or password. Please try again.');
+        console.log('Utilizador ou palavra-passe inválida, Tente novamente!'); 
+        alert('Utilizador ou palavra-passe inválida, Tente novamente!');
     }
 }

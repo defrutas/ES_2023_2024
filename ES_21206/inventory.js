@@ -46,14 +46,14 @@ function confirmQuantity() {
     if (requestedQuantity >= 0) {
         // Check if the sum exceeds 1000
         if (quantities[currentItemId - 1] + requestedQuantity > 1000) {
-            alert('Error: The total quantity cannot exceed 1000.');
+            alert('Erro: A quantidade total não pode exceder 1000');
         } else {
             // Perform logic to update the quantity and progress bars
             quantities[currentItemId - 1] += requestedQuantity;
             updateProgressBars();
             saveQuantities(); // Save quantities to localStorage
             closeModal(); // Close the modal after confirming the quantity
-            alert('Request sent!');
+            alert('Pedido enviado!');
 
             // Add incoming transaction to Movimentos
             const itemName = document.getElementById(`progress-text-${currentItemId}`).textContent.split('/')[1].trim();
